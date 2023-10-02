@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="formContainer">
+        <form [formGroup]="loginForm">
+            <div class="formInput">
+                <input formControlName="email" type="text" class="form" id="email" placeholder="Email">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert-danger">
+                    <div *ngIf="email.errors?.['required']">
+                        Email is required.
+                    </div>
+                    <div *ngIf="email.errors?.['email']">
+                        Email must be an email.
+                    </div>
+                </div>
+            </div>
+            <div class="formInput">
+                <input formControlName="password" type="password" class="form" id="password" placeholder="Password">
+                <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert-danger">
+                    <div *ngIf="password.errors?.['required']">
+                        Password is required.
+                    </div>
+                </div>
+            </div>
+            <div class="formButton">
+            <button type="submit" (click)="login()">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
