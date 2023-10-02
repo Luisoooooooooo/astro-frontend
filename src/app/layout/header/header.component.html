@@ -1,0 +1,35 @@
+<div class="header">
+    <div class="logo">
+        <h1><a routerLink="/" routerLinkActive="active"><img src="assets/img/ao-logo.png" alt=""></a></h1>
+    </div>
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <i class="fa-solid fa-xmark" id="close-icon"></i>
+    </label>
+    <div class="navbar">
+        <div class="toggle">
+            <div class="menu">
+                <ul>
+                    <li><a routerLink="/solarsystem" routerLinkActive="active">PEOPLE IN SPACE</a></li>
+                    <li><a routerLink="/planets" routerLinkActive="active">SOLAR SYSTEM</a></li>
+                    <li><a routerLink="/solarsystem" routerLinkActive="active">MISSIONS</a></li>
+                    <li><a routerLink="/solarsystem" routerLinkActive="active">APOD</a></li>
+                            <!-- <li *ngFor="let item of menuItems"><a routerLink="../">{{item}}</a></li> -->
+                </ul>
+            </div>
+            <div class="credentials">
+                <ul>
+                    <li *ngFor="let credential of menuCredentials">{{credential}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

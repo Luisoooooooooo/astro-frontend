@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: "Helvetica";
+    src: url(../src/assets/fonts/HelveticaNowTextLt.otf);
+}
+
+@font-face {
+    font-family: "HelveticaMed";
+    src: url(../src/assets/fonts/HelveticaNowTextMed.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "HelveticaMed", Arial, Helvetica, sans-serif;
+    background-color: #212121;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+}
