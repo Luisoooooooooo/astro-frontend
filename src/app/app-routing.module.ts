@@ -5,6 +5,7 @@ import { IssComponent } from './layout/iss/iss.component';
 import { SolarsystemComponent } from './layout/solarsystem/solarsystem.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 const routes: Routes = [
   { path: "", component: MainComponent },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: "iss", component: IssComponent },
   { path: "planets", component: SolarsystemComponent },
   { path: "dashboard", component: DashboardComponent },
-  { path: "login", component: LoginComponent }
+  { path: "login", component: LoginComponent },
+  { path: "register", component: RegisterComponent }
 
 
 ];

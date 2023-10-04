@@ -65,6 +65,13 @@ a {
     color: #ff5200;
 }
 
+.arrow-wip {
+    font-size: 2.75rem;
+    text-align: right;
+    padding: 0% 0% 10% 0%;
+    color: #ff5200;
+}
+
 @media (min-width: 450px) {
 
     h1 {
@@ -254,6 +261,14 @@ a {
     .arrow h1 {
         padding: 10% 0% 10% 0%;
     }
+
+    .arrow-wip h1{
+        font-size: 1.5rem;
+        text-align: right;
+        padding: 0% 0% 2.5% 0%;
+        color: #ff5200;
+    }
+    
 
 }
 

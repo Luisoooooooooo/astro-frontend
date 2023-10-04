@@ -12,7 +12,7 @@
             </div>
             <div class="bento-col-r">
                 <p>null</p>
-                <p>3.30114x10<sup>23</sup>kg</p>
+                <p>{{mercure.mass.massValue}}x10<sup>{{mercure.mass.massExponent}}</sup>kg</p>
                 <p>{{mercure.gravity}}</p>
             </div>
         </div>
@@ -30,7 +30,7 @@
             </div>
             <div class="bento-col-r">
                 <p>null</p>
-                <p>{{venus.mass}}</p>
+                <p>{{venus.mass.massValue}}x10<sup>{{venus.mass.massExponent}}</sup>kg</p>
                 <p>{{venus.gravity}}</p>
             </div>
         </div>
@@ -47,8 +47,8 @@
                 <p>Gravity</p>
             </div>
             <div class="bento-col-r">
-                <p>{{earth.moons}}</p>
-                <p>{{earth.mass}}</p>
+                <p *ngFor="let moon of earth.moons">{{moon.moon}}</p>
+                <p>{{earth.mass.massValue}}x10<sup>{{earth.mass.massExponent}}</sup>kg</p>
                 <p>{{earth.gravity}}</p>
             </div>
         </div>
@@ -61,12 +61,13 @@
             </div>
             <div class="bento-col-l">
                 <p>Moon</p>
+                <p>&nbsp;</p>
                 <p>Mass</p>
                 <p>Gravity</p>
             </div>
             <div class="bento-col-r">
-                <p>null</p>
-                <p>3.30114x10<sup>23</sup>kg</p>
+                <p *ngFor="let moon of mars.moons">{{moon.moon}}</p>
+                <p>{{mars.mass.massValue}}x10<sup>{{mars.mass.massExponent}}</sup>kg</p>
                 <p>{{mars.gravity}}</p>
             </div>
         </div>
@@ -88,13 +89,9 @@
                 <p>Gravity</p>
             </div>
             <div class="bento-col-r">
-                <p>Triton</p>
-                <p>Néreide</p>
-                <p>Nalade</p>
-                <p>Thalassa</p>
-                <p>Despina</p>
-                <p>8 more</p>
-                <p>1.02413x10<sup>26</sup>kg</p>
+                <p *ngFor="let moon of jupiter.moons.slice(0, 5)">{{moon.moon}}</p>
+                <p>+90 more</p>
+                <p>{{jupiter.mass.massValue}}x10<sup>{{jupiter.mass.massExponent}}</sup>kg</p>
                 <p>{{jupiter.gravity}}</p>
             </div>
         </div>
@@ -116,13 +113,9 @@
                 <p>Gravity</p>
             </div>
             <div class="bento-col-r">
-                <p>Triton</p>
-                <p>Néreide</p>
-                <p>Nalade</p>
-                <p>Thalassa</p>
-                <p>Despina</p>
-                <p>8 more</p>
-                <p>1.02413x10<sup>26</sup>kg</p>
+                <p *ngFor="let moon of saturne.moons.slice(0, 5)">{{moon.moon}}</p>
+                <p>+141 more</p>
+                <p>{{saturne.mass.massValue}}x10<sup>{{saturne.mass.massExponent}}</sup>kg</p>
                 <p>{{saturne.gravity}}</p>
             </div>
         </div>
@@ -144,13 +137,9 @@
                 <p>Gravity</p>
             </div>
             <div class="bento-col-r">
-                <p>Triton</p>
-                <p>Néreide</p>
-                <p>Nalade</p>
-                <p>Thalassa</p>
-                <p>Despina</p>
-                <p>8 more</p>
-                <p>1.02413x10<sup>26</sup>kg</p>
+                <p *ngFor="let moon of uranus.moons.slice(0, 5)">{{moon.moon}}</p>
+                <p>+22 more</p>
+                <p>{{uranus.mass.massValue}}x10<sup>{{uranus.mass.massExponent}}</sup>kg</p>
                 <p>{{uranus.gravity}}</p>
             </div>
         </div>
@@ -172,13 +161,9 @@
                 <p>Gravity</p>
             </div>
             <div class="bento-col-r">
-                <p>Triton</p>
-                <p>Néreide</p>
-                <p>Nalade</p>
-                <p>Thalassa</p>
-                <p>Despina</p>
-                <p>8 more</p>
-                <p>1.02413x10<sup>26</sup>kg</p>
+                <p *ngFor="let moon of neptune.moons.slice(0, 5)">{{moon.moon}}</p>
+                <p>+14 more</p>
+                <p>{{neptune.mass.massValue}}x10<sup>{{neptune.mass.massExponent}}</sup>kg</p>
                 <p>{{neptune.gravity}}</p>
             </div>
         </div>

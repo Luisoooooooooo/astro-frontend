@@ -12,6 +12,7 @@ import { IssComponent } from './layout/iss/iss.component';
 import { SolarsystemComponent } from './layout/solarsystem/solarsystem.component';
 import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     IssComponent,
     SolarsystemComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

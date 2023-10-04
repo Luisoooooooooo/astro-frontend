@@ -12,6 +12,10 @@ import { LoginRequest } from 'src/app/services/auth/loginRequest';
 export class LoginComponent implements OnInit {
 
   loginForm=this.formBuilder.group({
+    name: [
+      'Luiso',
+      Validators.required,
+    ],
     email:[
       'a@a.com', [
         Validators.required,
@@ -25,6 +29,10 @@ export class LoginComponent implements OnInit {
 constructor(private formBuilder:FormBuilder, private router:Router, private loginService: LoginService) {}
 
 ngOnInit(): void {}
+
+get name() {
+  return this.loginForm.controls.name;
+}
 
 get email() {
   return this.loginForm.controls.email;
