@@ -1,10 +1,7 @@
 <div class="bento-box">
     <div class="bento-box-md">
-        <div class="bento-content">
-            <h1>Welcome, space traveler</h1>
-            <p class="welcome">Explore the cosmos like never before with our user-friendly interface and
-                immerse yourself in a world of stunning images, videos, and information
-                provided by NASA. Start your journey through space today!</p>
+        <div class="bento-content" *ngIf="memberLoginOn">
+            <h1>Welcome back, {{memberData?.name}}</h1>
         </div>
     </div>
     <div class="bento-box-md-img">

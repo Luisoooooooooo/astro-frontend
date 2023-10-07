@@ -25,4 +25,8 @@ export class MemberService {
     return this.http.post<any>(this.url+`/api/members`, member, this.httpOptions);
   }
 
+  deleteMember(id: any): Observable<any> {
+    return this.http.delete<any>(this.url+`/api/member/`+id, this.httpOptions);
+  }
+
 }

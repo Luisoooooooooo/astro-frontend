@@ -14,6 +14,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { MembersComponent } from './members/members.component';
+import { MemberDashComponent } from './pages/member-dash/member-dash.component';
 
 /* import { UserModule } from './user/user.module'; */
 
@@ -27,7 +28,8 @@ import { MembersComponent } from './members/members.component';
     LoginComponent,
     DashboardComponent,
     RegisterComponent,
-    MembersComponent
+    MembersComponent,
+    MemberDashComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MemberService } from '../services/member.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-members',
@@ -8,7 +9,7 @@ import { MemberService } from '../services/member.service';
 })
 export class MembersComponent implements OnInit{
 
-  constructor(private memberService: MemberService) {}
+  constructor(private memberService: MemberService, private router: Router) {}
 
   members: any;
 
@@ -22,5 +23,16 @@ export class MembersComponent implements OnInit{
       console.log(this.members);
     })
   }
+
+  deleteMember(id:any) {
+    this.memberService.deleteMember(id).subscribe(
+      res => {
+        this.members = this.members.filter((a:any) => a.id == id);
+      }
+    );
+    this.router.navigateByUrl('/dashboard');
+  }
+
+
 
 }

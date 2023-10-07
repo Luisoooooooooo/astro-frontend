@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  userLoginOn: boolean = false;
+  memberLoginOn: boolean = false;
 
   constructor() {}
   ngOnInit(): void {

@@ -10,7 +10,7 @@ import { LoginRequest } from 'src/app/services/auth/loginRequest';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  loginError: string = "";
   loginForm=this.formBuilder.group({
     name: [
       'Luiso',
@@ -44,9 +44,20 @@ get password() {
 
 login() {
   if(this.loginForm.valid) {
-    this.loginService.login(this.loginForm.value as LoginRequest);
-    this.router.navigateByUrl('/');
-    this.loginForm.reset();
+    this.loginService.login(this.loginForm.value as LoginRequest).subscribe({
+      next: (memberData) => {
+        console.log(memberData);
+      },
+      error: (errorData) => {
+        console.log(errorData);
+        this.loginError=errorData;
+      },
+      complete: () => {
+        console.info("Login complete");
+        this.router.navigateByUrl('/memberDash');
+        this.loginForm.reset();
+      }
+    })
   } else {
     this.loginForm.markAllAsTouched();
     alert("Error al ingresar los datos.")

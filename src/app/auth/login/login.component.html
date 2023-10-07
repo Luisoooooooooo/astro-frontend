@@ -1,6 +1,7 @@
 <div class="container">
     <div class="formContainer">
         <form [formGroup]="loginForm">
+            <p class="error">{{loginError}}</p>
             <div class="formInput">
                 <input formControlName="email" type="text" class="form" id="email" placeholder="Email">
                 <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert-danger">
