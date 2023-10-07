@@ -1,26 +1,41 @@
-<div class="container">
-    <div class="bento-box">
-        <h1>Members</h1>
-        <div>
-            <table>
-                <thead>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Password</th>
-                </thead>
-                <tbody *ngIf="members.length">
-                    <tr *ngFor="let member of members">
-                        <td>{{member.id}}</td>
-                        <td>{{member.name}}</td>
-                        <td>{{member.email}}</td>
-                        <td>{{member.password}}</td>
-                        <td><button class="btn btn-edit">Edit</button> <button class="btn btn-delete" (click)="deleteMember(member.id)">Delete</button></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div>
-                <button>Add member</button>
+<div class="bento-box">
+    <div class="bento-box-md">
+        <div class="bento-content">
+            <h1>Members</h1>
+            <div class="membersTable">
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                    </thead>
+                    <tbody *ngIf="members.length">
+                        <tr *ngFor="let member of members">
+                            <td>{{member.id}}</td>
+                            <td>{{member.name}}</td>
+                            <td>{{member.email}}</td>
+                            <td>{{member.password.slice(0, 30)}}...</td> 
+                            <td class="td-right"><button class="btn btn-edit">Edit</button> <button class="btn btn-delete" (click)="deleteMember(member.id)">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <button class="btn btn-add" routerLink="/add">Add new member</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bento-box-md">
+        <div class="bento-content">
+            <h1>Admin dashboard</h1>
+            <div class="adminDashboard">
+                <p>Welcome to the admin dashboard, here you can manage all members.</p>
+                <br>
+                <p><strong>Add member:</strong> Add a new member to the database.</p>
+                <p><strong>Edit:</strong> Edit the information of any member.</p>
+                <p><strong>Delete:</strong> Delete any member.</p>
             </div>
         </div>
     </div>

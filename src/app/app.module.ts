@@ -29,7 +29,7 @@ import { MemberDashComponent } from './pages/member-dash/member-dash.component';
     DashboardComponent,
     RegisterComponent,
     MembersComponent,
-    MemberDashComponent
+    MemberDashComponent,
   ],
   imports: [
     BrowserModule,

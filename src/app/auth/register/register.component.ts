@@ -14,16 +14,16 @@ export class RegisterComponent implements OnInit {
 
   registerForm=this.formBuilder.group({
     name: [
-      'Luiso',
+      '',
       Validators.required,
     ],
     email:[
-      'a@a.com', [
+      '', [
         Validators.required,
         Validators.email
       ]],
     password:  [
-      '',
+      (''),
       Validators.required]
   })
   
