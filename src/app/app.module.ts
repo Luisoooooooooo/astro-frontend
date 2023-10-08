@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { MembersComponent } from './members/members.component';
 import { MemberDashComponent } from './pages/member-dash/member-dash.component';
+import { EditMissionComponent } from './pages/edit-mission/edit-mission.component';
 
 /* import { UserModule } from './user/user.module'; */
 
@@ -33,7 +35,8 @@ import { MemberDashComponent } from './pages/member-dash/member-dash.component';
     MembersComponent,
     MemberDashComponent,
     MissionsComponent,
-    NewMissionComponent
+    NewMissionComponent,
+    EditMissionComponent
 
   ],
   imports: [
@@ -42,6 +45,7 @@ import { MemberDashComponent } from './pages/member-dash/member-dash.component';
     HttpClientModule,
     GoogleMapsModule,
     ReactiveFormsModule,
+    FormsModule
 
   ],
   providers: [],

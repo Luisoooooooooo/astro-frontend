@@ -1,0 +1,50 @@
+<div>
+    <app-members></app-members>
+    <div class="bento-box">
+        <div class="bento-box-md">
+            <div class="bento-content">
+                <h1>Missions</h1>
+                <div class="missionsDashboard">
+                    <div class="formInput">
+                        <label for="missionTitle">Mission title</label>
+                        <input formControlName="title" type="text" class="form" id="title" #missionTitle>
+                    </div>
+                    <div class="formInput">
+                        <label for="missionPost">Mission post</label>
+                        <textarea formControlName="post" type="text" class="form" id="post" #missionPost rows="3"></textarea>
+                    </div>
+                    <div class="formInput">
+                        <label for="missionAuthor">Mission author</label>
+                        <input formControlName="author" type="text" class="form" id="author" #missionAuthor>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-add" (click)="add(missionTitle.value, missionPost.value, missionAuthor.value); missionTitle.value=''; missionPost.value=''; missionAuthor.value=''">Add New Mission</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bento-box-md">
+            <div class="bento-content">
+                <h1>Edit Mission</h1>
+                <div class="missionsDashboard">
+                        <div class="formInput">
+                            <label for="missionTitle">title</label>
+                            <input type="text" class="form" [(ngModel)]="mission.title" #missionTitle>
+                        </div>
+                        <div class="formInput">
+                            <label for="missionPost">post</label>
+                            <textarea class="form" [(ngModel)]="mission.post" #missionPost rows="3"></textarea>
+                        </div>
+                        <div class="formInput">
+                            <label for="missionAuthor">author</label>
+                            <input type="text" class="form" [(ngModel)]="mission.author" #missionAuthor>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-add" (click)="update(missionTitle.value, missionPost.value, missionAuthor.value)">Save changes</button>
+                        </div>                 
+                </div>
+            </div>
+        </div>
+    </div>
+                    
+</div>
