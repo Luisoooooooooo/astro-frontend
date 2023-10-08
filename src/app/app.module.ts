@@ -10,6 +10,8 @@ import { HeaderComponent } from './layout/header/header.component';
 import { MainComponent } from './layout/main/main.component';
 import { IssComponent } from './layout/iss/iss.component';
 import { SolarsystemComponent } from './layout/solarsystem/solarsystem.component';
+import { MissionsComponent } from './layout/missions/missions.component';
+import { NewMissionComponent } from './pages/new-mission/new-mission.component';
 import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { RegisterComponent } from './auth/register/register.component';
@@ -30,6 +32,9 @@ import { MemberDashComponent } from './pages/member-dash/member-dash.component';
     RegisterComponent,
     MembersComponent,
     MemberDashComponent,
+    MissionsComponent,
+    NewMissionComponent
+
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,7 @@ import { MemberDashComponent } from './pages/member-dash/member-dash.component';
     HttpClientModule,
     GoogleMapsModule,
     ReactiveFormsModule,
-/*     UserModule  */
+
   ],
   providers: [],
   bootstrap: [AppComponent]
