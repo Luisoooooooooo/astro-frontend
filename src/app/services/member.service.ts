@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MemberService {
 
-  url:string =  'http://localhost:8000';
+  url:string =  'https://luis.proyectosdwa.es/backend/public';
 
   constructor(private http: HttpClient) { }
 
@@ -23,6 +23,14 @@ export class MemberService {
 
   addMember(member:any): Observable<any> {
     return this.http.post<any>(this.url+`/api/members`, member, this.httpOptions);
+  }
+
+  find(id: number): Observable<any> {
+    return this.http.get(this.url+`/api/member/`+id);
+  }
+
+  update(id: number, member: any): Observable<any> {
+      return this.http.put(this.url+`/api/member/`+id, member, this.httpOptions);
   }
 
   deleteMember(id: any): Observable<any> {

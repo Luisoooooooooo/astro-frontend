@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth/auth.service';
 import { LoginService } from 'src/app/services/auth/login.service';
 import { LoginRequest } from 'src/app/services/auth/loginRequest';
 
@@ -9,30 +10,19 @@ import { LoginRequest } from 'src/app/services/auth/loginRequest';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
   loginError: string = "";
   loginForm=this.formBuilder.group({
-    name: [
-      'Luiso',
-      Validators.required,
-    ],
-    email:[
-      'a@a.com', [
-        Validators.required,
-        Validators.email
-      ]],
-    password:  [
-      '',
-      Validators.required]
+    email:[ '', [ Validators.required, Validators.email ]],
+    password:  [ '', Validators.required]
   })
   
-constructor(private formBuilder:FormBuilder, private router:Router, private loginService: LoginService) {}
+constructor(private formBuilder:FormBuilder, private router:Router, private loginService: LoginService, private authService: AuthService) {}
+
+
 
 ngOnInit(): void {}
-
-get name() {
-  return this.loginForm.controls.name;
-}
 
 get email() {
   return this.loginForm.controls.email;
@@ -46,21 +36,19 @@ login() {
   if(this.loginForm.valid) {
     this.loginService.login(this.loginForm.value as LoginRequest).subscribe({
       next: (memberData) => {
-        console.log(memberData);
+        this.router.navigateByUrl('/');
       },
       error: (errorData) => {
-        console.log(errorData);
-        this.loginError=errorData;
+        console.error(errorData);
+        this.loginError = errorData;
       },
       complete: () => {
         console.info("Login complete");
-        this.router.navigateByUrl('/memberDash');
-        this.loginForm.reset();
       }
-    })
+    });
   } else {
     this.loginForm.markAllAsTouched();
-    alert("Error al ingresar los datos.")
+    alert("Error");
   }
 }
 

@@ -1,26 +1,22 @@
 <div class="bento-box">
+
     <div class="bento-box-md">
-        <div class="bento-content-intro">
-            <h1>Welcome, space traveler</h1>
+        <div class="bento-content-intro" >
+            <div class="greet" *ngIf="memberLoginOn">
+                <h1 *ngIf="memberLoginOn">Welcome back, {{memberData?.name}}</h1>
+            </div> 
+            <h1 *ngIf="!memberLoginOn">Welcome back, space traveler</h1>
             <p class="welcome">Explore the cosmos like never before with our user-friendly interface and
                 immerse yourself in a world of stunning images, videos, and information
                 provided by NASA.
                 <br>
                 <br>
-                Start your journey through space today!</p>
+                Start your journey through space today!
+            </p>
         </div>
     </div>
-    <div class="bento-box-md-img">
-        <div class="img-bg">
-
-        </div>
-    </div>
-    <div class="bento-box-sm">
-        <div class="bento-content">
-            <h2>People<br> in space</h2>
-            <div class="arrow-wip">
-                <h1>Coming soon</h1>
-            </div>
+    <div class="bento-box-md">
+        <div class="img-bg-01">
         </div>
     </div>
     <a routerLink="/planets" class="bento-box-sm">
@@ -43,11 +39,23 @@
     </a>
     <div class="bento-box-sm">
         <div class="bento-content">
+            <h2>People<br> in space</h2>
+            <div class="arrow-wip">
+                <h1>Coming soon</h1>
+            </div>
+        </div>
+    </div>
+    <div class="bento-box-sm">
+        <div class="bento-content">
             <h2>APOD</h2>
             <h2><br></h2>
             <div class="arrow-wip">
                 <h1>Coming soon</h1>
             </div>
+        </div>
+    </div>
+    <div class="bento-box-xxl">
+        <div class="img-bg-02">
         </div>
     </div>
     <app-iss></app-iss>

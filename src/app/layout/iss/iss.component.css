@@ -68,6 +68,14 @@ h1 {
     padding: 1px 0px 0px 0px;
 }
 
+:host ::ng-deep .map-container {
+    border-radius: 8px;
+  }
+
+.map-container {
+    border-radius: 8px !important;
+}
+
 @media (min-width: 450px) {
 
     .col h1 {
@@ -234,6 +242,10 @@ h1 {
         border-radius: 8px;
         margin: 0 0 2% 0;
     }
+
+    :host ::ng-deep .map-container {
+        border-radius: 8px;
+      }
 
     .bento-box-sm {
         width: 49%;

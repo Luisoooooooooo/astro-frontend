@@ -58,15 +58,4 @@ get password() {
   return this.registerForm.controls.password;
 }
 
-register() {
-  if(this.registerForm.valid) {
-    this.registerService.register(this.registerForm.value as RegisterRequest);
-    this.router.navigateByUrl('/');
-    this.registerForm.reset();
-  } else {
-    this.registerForm.markAllAsTouched();
-    alert("Error al ingresar los datos.")
-  }
-}
-
 }

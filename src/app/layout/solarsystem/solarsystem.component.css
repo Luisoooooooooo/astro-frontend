@@ -2,6 +2,10 @@ h1 {
     font-size: 3rem;
 }
 
+.disabled {
+    color: #818181;
+}
+
 .bento-box {
     width: 100%;
     display: flex;
@@ -186,6 +190,7 @@ h1 {
     h1 {
         font-size: 3rem;
     }
+
     
     .bento-box {
         width: 100%;
@@ -237,7 +242,7 @@ h1 {
     
     .bento-col-r {
         text-align: right;
-        color: #ff5200;
+        color: #ff5500;
     }
 
 }

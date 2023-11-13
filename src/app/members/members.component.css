@@ -2,15 +2,6 @@ h1 {
     font-size: 3rem;
 }
 
-h2 {
-    font-size: 3rem;
-}
-
-a {
-    text-decoration: none;
-    color: #000000;
-}
-
 .bento-box {
     width: 100%;
     display: flex;
@@ -22,200 +13,213 @@ a {
 .bento-box-md {
     width: 100%;
     border-radius: 8px;
-
-    margin: 0 0 4% 0;
+    margin: 0 0 1% 0;
     background-color: #eeeeee;
 }
 
 .bento-content {
-    width: 90%;
+    width: 96%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 5%
+    padding: 2%
 }
 
-@media (min-width: 450px) {
+.membersTable  {
+    padding-top:  2.5%;
+}
 
-    h1 {
-        font-size: 3.5rem;
-    }
+.adminDashboard {
+    padding-top: 2.5%;
+    font-family: "Helvetica";
+}
 
-    h2 {
-        font-size: 2.5rem;
-    }
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin-bottom: 2.5%;
+    width: 100%;
+    table-layout: fixed;
+}
+  
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+  
+table tr {
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+  
+table th,
+table td {
+    padding: .625em;
+}
+  
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
 
-    a {
-        color: #000000;
-        text-decoration: none;
-    }
+tr.odd:nth-child(odd) {
+    font-family: "Helvetica";
+    background-color: #e6e6e6;
+}
+ 
+tr.odd:nth-child(even) {
+    font-family: "Helvetica";
+    background-color: #d4d4d4;
+}
+
+button {
+    margin: 0px 5px;
+}
+
+.btn {
+    align-items: center;
+    border: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Helvetica";
+    font-size: 14px;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+}
+
+.btn-add {
+    background-color: #212121;
+}
+
+.btn-edit {
+    background-color: #212121;
+}
+
+.btn-delete {
+    background-color: #ff5200;
+}
+
+.td-right {
+    text-align: right;
+}
+  
+@media screen and (max-width: 1200px) {
 
     .bento-box-md {
         width: 100%;
-        border-radius: 8px;
-        margin: 0 0 1.5% 0;
-        background-color: #eeeeee;
-    }
-
-    .bento-content {
-        width: 90%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 5%;
-    }
-
-}
-
-@media (min-width: 800px) {
-
-    h1 {
-        font-size: 3.5rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    a {
-        color: #000000;
-        text-decoration: none;
-    }
-
-    .bento-box-md {
-        width: 100%;
-        border-radius: 8px;
-        margin: 0 0 1.25% 0;
-        background-color: #eeeeee;
-    }
-
-    .bento-content {
-        width: 90%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 5%;
-    }
-
-}
-
-@media (min-width: 1080px) {
-
-    h1 {
-        font-size: 3.5rem;
-    }
-
-    h2 {
-        font-size: 3rem;
-    }
-
-    a {
-        color: #000000;
-        text-decoration: none;
-    }
-
-    .bento-box-md {
-        width: 49.5%;
         border-radius: 8px;
         padding-bottom: 5%;
-        margin: 0 0 1% 0;
+        margin: 0 0 2% 0;
         background-color: #eeeeee;
     }
 
-    .bento-box-md .bento-content {
-        width: 96%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 2%;
+    table {
+        border: 0;
     }
-
-    .bento-content {
-        width: 90%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 5%;
-    }
-
-    .membersTable {
-        padding-top: 10%;
-    }
-
-    .adminDashboard {
-        font-family: "Helvetica";
-        padding-top: 2.5%;
+  
+    table caption {
+        font-size: 1.3em;
     }
     
-    table  {
-        width: 100%;
-        border-collapse: collapse;
-        font-family: "Helvetica";
-        margin-bottom: 2.5%;
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
     }
-
-    th {
-        text-align: left;
-        padding: 0px 0px 20px 5px;
+    
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
     }
-
-    td {
-        padding: 5px;
-    }
-
-    .td-right {
+    
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
         text-align: right;
     }
-
-    tr:nth-child(odd) {
-        background-color: #e6e6e6;
-     }
-     tr:nth-child(even) {
-        background-color: #d4d4d4;
-     }
     
-    button {
-        margin: 0px 5px;
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
     }
-
-    .btn {
-        align-items: center;
-        border: 0;
-        border-radius: 8px;
-        box-sizing: border-box;
-        color: #ffffff;
-        cursor: pointer;
-        display: inline-flex;
-        font-family: "Helvetica";
-        font-size: 14px;
-        justify-content: center;
-        line-height: 20px;
-        max-width: 480px;
-        min-height: 40px;
-        min-width: 0px;
-        overflow: hidden;
-        padding: 0px;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-        touch-action: manipulation;
-        transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-        user-select: none;
-        -webkit-user-select: none;
-        vertical-align: middle;
-      }
-
-      .btn-add {
-        background-color: #212121;
-      }
-
-      .btn-edit {
-        background-color: #212121;
-      }
-
-      .btn-delete {
-        background-color: #ff5200;
-      }
-
+    
+    table td:last-child {
+        border-bottom: 0;
+    }
 }
 
+@media screen and (max-width: 600px) {
+
+    .bento-box-md {
+        padding-bottom: 5%;
+    }
+
+    table {
+        border: 0;
+    }
+  
+    table caption {
+        font-size: 1.3em;
+    }
+    
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+    
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+    
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    table td:last-child {
+        border-bottom: 0;
+    }
+}

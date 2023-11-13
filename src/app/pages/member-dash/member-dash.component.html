@@ -1,7 +1,8 @@
 <div class="bento-box">
     <div class="bento-box-md">
         <div class="bento-content" *ngIf="memberLoginOn">
-            <h1>Welcome back, {{memberData?.name}}</h1>
+            <h1 *ngIf="!memberLoginOn">Welcome back, space traveler</h1>
+            <h1 *ngIf="memberLoginOn">Welcome back, {{memberData?.name}}</h1>
         </div>
     </div>
     <div class="bento-box-md-img">

@@ -3,7 +3,7 @@
         <form [formGroup]="loginForm">
             <p class="error">{{loginError}}</p>
             <div class="formInput">
-                <input formControlName="email" type="text" class="form" id="email" placeholder="Email">
+                <input formControlName="email" type="text" class="form" placeholder="Email">
                 <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert-danger">
                     <div *ngIf="email.errors?.['required']">
                         Email is required.
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="formInput">
-                <input formControlName="password" type="password" class="form" id="password" placeholder="Password">
+                <input formControlName="password" type="password" class="form" placeholder="Password">
                 <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert-danger">
                     <div *ngIf="password.errors?.['required']">
                         Password is required.

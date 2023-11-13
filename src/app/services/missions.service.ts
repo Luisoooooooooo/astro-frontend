@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MissionsService {
 
-  url:string =  'http://localhost:8000';
+  url:string =  'https://luis.proyectosdwa.es/backend/public';
 
   constructor(private http: HttpClient) { }
 

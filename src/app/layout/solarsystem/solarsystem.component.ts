@@ -14,7 +14,7 @@ export class SolarsystemComponent {
   jupiter: any = [];
   saturne: any = [];
   uranus: any = [];
-  neptune: any = [];
+  neptune: any = null;
   
   constructor(private apiService: PlanetsApiService) {}
 

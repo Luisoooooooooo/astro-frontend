@@ -9,20 +9,28 @@ import { Member } from '../member';
 })
 export class LoginService {
 
-  url:string =  'http://localhost:8000';
+  url:string =  'https://luis.proyectosdwa.es/backend/public';
   currentMemberLoginOn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   currentMemberData: BehaviorSubject<Member> = new BehaviorSubject<Member>({id:0, email:'', password:''});
+  private currentMemberEmail: BehaviorSubject<string> = new BehaviorSubject<string>('');
+
 
   constructor(private http:HttpClient) { }
 
-  login(credentials:LoginRequest):Observable<Member> {
-    return this.http.get<Member>(this.url+`/api/members`).pipe(
-      tap((memberData: Member) => {
-        this.currentMemberData.next(memberData);
+  login(credentials:LoginRequest):Observable<Member[]> {
+    return this.http.post<any>(this.url+`/api/login`, credentials).pipe(
+      tap(memberData => {
+        console.log({memberData});
+        this.currentMemberEmail.next(memberData.data.email);
+        this.currentMemberData.next(memberData.data);
         this.currentMemberLoginOn.next(true);
       }),
       catchError(this.handleError)
-    );
+    )
+  }
+
+  get memberEmail(): Observable<string> {
+    return this.currentMemberEmail.asObservable();
   }
 
   private handleError(error:HttpErrorResponse) {
@@ -34,8 +42,12 @@ export class LoginService {
     return throwError(() => new Error('Something gone wrong. Try again.'));
   }
 
-  get memberData():Observable<Member> {
+  get memberData(): Observable<Member> {
     return this.currentMemberData.asObservable();
+  }
+
+  get memberLoginOn(): Observable<boolean> {
+    return this.currentMemberLoginOn.asObservable();
   }
 
 }

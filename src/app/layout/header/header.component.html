@@ -11,19 +11,19 @@
         <div class="toggle">
             <div class="menu">
                 <ul>
-                    <li><a routerLink="/solarsystem" routerLinkActive="active">PEOPLE IN SPACE</a></li>
                     <li><a routerLink="/planets" routerLinkActive="active">SOLAR SYSTEM</a></li>
                     <li><a routerLink="/missions" routerLinkActive="active">MISSIONS</a></li>
-                    <li><a routerLink="/solarsystem" routerLinkActive="active">APOD</a></li>
+                    <li><a class="inactive"><del>PEOPLE IN SPACE</del></a></li>
+                    <li><a class="inactive"><del>APOD</del></a></li>
                             
                 </ul>
             </div>
             <div class="credentials">
                 <ul>
-                    <li *ngIf="!userLoginOn"><a routerLink="/dashboard" routerLinkActive="active">DASHBOARD</a></li>
-                    <li *ngIf="!userLoginOn"><a routerLink="/login" routerLinkActive="active">LOGIN</a></li>
-                    <li *ngIf="userLoginOn"><a routerLink="/solarsystem" routerLinkActive="active">LOGOUT</a></li>
-                    <li *ngIf="!userLoginOn"><a routerLink="/register" routerLinkActive="active">SIGNUP</a></li>
+                    <li *ngIf="adminLoginOn"><a routerLink="/dashboard" routerLinkActive="active">DASHBOARD</a></li>
+                    <li *ngIf="!memberLoginOn"><a routerLink="/login" routerLinkActive="active">LOGIN</a></li>
+                    <li *ngIf="memberLoginOn"><a (click)="onLogout()">LOGOUT</a></li>
+                    <li *ngIf="!memberLoginOn"><a routerLink="/register" routerLinkActive="active">SIGNUP</a></li>
 
                 </ul>
             </div>

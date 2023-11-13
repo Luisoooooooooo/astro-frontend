@@ -5,6 +5,7 @@ import { IssComponent } from './layout/iss/iss.component';
 import { MissionsComponent } from './layout/missions/missions.component';
 import { NewMissionComponent } from './pages/new-mission/new-mission.component';
 import { EditMissionComponent } from './pages/edit-mission/edit-mission.component';
+import { EditMemberComponent } from './pages/edit-member/edit-member.component';
 import { SolarsystemComponent } from './layout/solarsystem/solarsystem.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MemberDashComponent } from './pages/member-dash/member-dash.component';
@@ -19,8 +20,9 @@ const routes: Routes = [
   { path: "missions", component: MissionsComponent },
   { path: "new-mision", component: NewMissionComponent },
   { path: "edit/:missionId", component: EditMissionComponent },
+  { path: "modify/:memberId", component: EditMemberComponent },
   { path: "dashboard", component: DashboardComponent },
-  { path: "memberDash", component: MemberDashComponent },
+  { path: "member-dash", component: MemberDashComponent },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent }
 

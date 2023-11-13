@@ -1,0 +1,24 @@
+<div class="bento-box">
+    <div class="bento-box-md">
+        <div class="bento-content">
+            <h1>Edit member</h1>
+            <div class="memberModify">
+                <div class="formInput">
+                    <label for="memberName">Name</label><br>
+                    <input type="text" class="form" [(ngModel)]="member.name" #memberName>
+                </div>
+                <div class="formInput">
+                    <label for="memberEmail">Email</label><br>
+                    <input type="text" class="form" [(ngModel)]="member.email" #memberEmail>
+                </div>
+                <div class="formInput">
+                    <label for="memberPassword">Author</label><br>
+                    <input type="text" class="form" [(ngModel)]="member.password" #memberPassword>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-add" (click)="update(memberName.value, memberEmail.value, memberPassword.value)">Update</button>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>

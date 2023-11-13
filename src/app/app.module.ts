@@ -19,6 +19,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { MembersComponent } from './members/members.component';
 import { MemberDashComponent } from './pages/member-dash/member-dash.component';
 import { EditMissionComponent } from './pages/edit-mission/edit-mission.component';
+import { EditMemberComponent } from './pages/edit-member/edit-member.component';
 
 /* import { UserModule } from './user/user.module'; */
 
@@ -36,7 +37,9 @@ import { EditMissionComponent } from './pages/edit-mission/edit-mission.componen
     MemberDashComponent,
     MissionsComponent,
     NewMissionComponent,
-    EditMissionComponent
+    EditMissionComponent,
+    EditMemberComponent,
+
 
   ],
   imports: [

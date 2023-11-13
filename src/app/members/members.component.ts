@@ -11,7 +11,9 @@ export class MembersComponent implements OnInit{
 
   constructor(private memberService: MemberService, private router: Router) {}
 
+  memberId: any;
   members: any;
+  member:  any;
 
   ngOnInit(): void {
     this.showMembers();
@@ -21,6 +23,12 @@ export class MembersComponent implements OnInit{
     this.members = this.memberService.listMembers().subscribe(member => {
       this.members = member;
       console.log(this.members);
+    })
+  }
+
+  update(memberName: string, memberEmail: string, memberPassword: string) {
+    this.memberService.update(this.memberId, this.member).subscribe((res) => {
+      this.router.navigateByUrl('/dashboard');
     })
   }
 

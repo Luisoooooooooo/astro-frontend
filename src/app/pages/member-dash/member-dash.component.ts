@@ -11,25 +11,25 @@ import { Member } from 'src/app/services/member';
 export class MemberDashComponent implements OnInit {
   memberLoginOn: boolean = false;
   memberData?:Member;
-  data: any = {};
   
-  constructor(private apiService: ApiISSService, private loginService: LoginService) {}
-
-
+  constructor(private loginService: LoginService) {}
+  
   ngOnInit(): void {
-    this.fillData();
     this.loginService.currentMemberLoginOn.subscribe({
       next: (memberLoginOn) => {
-        this.memberLoginOn=memberLoginOn;
+        this.memberLoginOn = memberLoginOn;
+        console.log({memberLoginOn});
+      }
+    });
+
+    this.loginService.currentMemberData.subscribe({
+      next:(memberData) => {
+        this.memberData = memberData;
       }
     })
+
   }
 
-fillData() {
-  this.apiService.getData().subscribe(data => {
-    this.data = data;
-    console.log(this.data);
-  })
-}
+
 
 }
